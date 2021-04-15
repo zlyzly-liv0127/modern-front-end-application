@@ -1,0 +1,184 @@
+.toutiao-header {
+  width: 100%;
+  background: black;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.left-header1{
+  padding-left: 10px;
+  padding-right: 5px;
+  border-right: 1px solid white;
+}
+.left-header2{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.left-header3{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.left-header4{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.left-header5{
+  padding-left: 5px;
+}
+.right-header{
+  float: right;  
+}
+.right-header1{
+  padding-right: 5px;
+  border-right: 1px solid white;
+}
+.right-header2{
+  padding-left: 5px;
+  padding-right: 10px;
+}
+.right-header::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.center-content{
+  padding: 0px 20px;
+  width: 100%;
+}
+.center-header{
+  font-weight: bold;
+  font-family: Yuanti SC;
+  font-size: 120%;
+}
+.center-content > span{
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.center-content .category_video{
+  border: 1px solid red;
+  color: red;
+  font-size: 80%;
+}
+
+.center-content .category_politics{
+  border: 1px solid green;
+  color: green;
+  font-size: 80%;
+}
+.center-content .category_inter{
+  border: 1px solid green;
+  color: green;
+  font-size: 80%;
+}
+.center-content > div{
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+}
+.center-content > img{ 
+  max-width: 8%; 
+}
+.center-content .sideImg{
+  float: left;
+  padding-top: 20px;
+  padding-right: 20px;
+  max-width: 20%;
+}
+.sidebar1{
+  width: 100px;
+  padding: 0 5px;
+  margin-left: -100%;
+  right: 160px;
+  text-align: center;
+
+}
+.sidebar1 .toutiao{
+  color: red;
+  font-size: 150%;
+  font-weight: bold; 
+  font-family: Yuanti SC;
+
+}
+.sidebar1 .recommendation{
+  background: red;
+  color: white;
+}
+.sidebar2{
+  width: 280px;
+  padding: 0 10px;
+  margin-right: -100%;
+}
+.sidebar2 .fname{
+  width: 200px;
+  height: 25px;
+}
+.sidebar2 .search{
+  width: 60px;
+  height: 25px;
+  background: blue;
+  color: white;
+}
+.sidebar2 .logIn{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: grey;
+  padding: 10px;
+}
+.logIn .logIn1{
+  padding: 15px;
+  background: white;
+  border: 1px solid;
+  text-align: center;
+}
+.logIn1 > span{
+  font-size: 50%;
+}
+.logIn1 .logIn2{
+  width: 200px;
+  background: red;
+  color: white;
+  height: 40px;
+}
+.logIn1 > img{ 
+  max-width: 12%; 
+}
+.sidebar2 .sideChoice{
+  background: grey;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-top:2px solid red;
+}
+.firstChoice{
+  font-size: 130%;
+  font-weight: bold;
+}
+.otherChoice1{
+  padding-right: 5px;
+  font-size: 90%;
+}
+.otherChoice2{
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 90%;
+}
+.otherChoice3{
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 90%;
+}
+.otherChoice4{
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 90%;
+}
+.otherChoice4{
+  padding-left: 5px;
+  font-size: 90%;
+}
+.sidebar2 .sideNote{
+  background: grey;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 90%;
+}
