@@ -19,3 +19,4 @@
 我给每个数据添加了一个id，这样就可以利用data的map方法进行遍历显示。
 
 实现的效果见demo.jpg
+node_modules文件太多就没有传
