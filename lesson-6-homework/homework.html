@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<title>CodePen - Catty Music</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+<style>
+* {
+box-sizing: border-box;
+}
+/*设置整个界面都为border-box，即盒模型中的宽和高包括padding和border*/
+html, body {
+height: 100%;
+}
+/*设置高度占满，同时满足浏览器的兼容性*/
+body {
+display: flex;
+background-color: #fff;
+margin: 0;
+font-family: Lato, sans-serif;
+color: #222;
+font-size: 0.9em;
+}
+
+main {
+display: flex;
+flex-direction: column;
+flex: 1 0 auto;/*1会占满所有的空间*/
+}
+/*main包括sideBar和contentPane两者共同占满屏幕的所有宽度 注意main的主轴是横轴*/
+sideBar {
+flex: 0 0 150px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;/*所有元素均分容器宽度*/
+align-items: center;/*交叉轴即横轴上居中*/
+background-color: #f2f2f2;
+}
+/*使用了fontawesome的图标字体css库*/
+sideBar > i.fa {
+font-size: 0.9em;/*设置字体的大小就会改变图标容器的大小*/
+}
+
+.ContentPane {
+display: flex;
+flex-direction: column;/*主轴已经更换*/
+flex: 1 0 auto;/*占据剩余所有可用空间*/
+}
+.AlbumPane > img {
+    width: 200px;
+    height: 200px;
+}
+
+.AlbumPane {
+flex: 0 0 290px;/*没看懂这个280px是什么意思，在主轴中占280px，这里由于插入了假图片，故设置为330px以下的大小是没有实际效果的*/
+display: flex;
+padding: 40px;
+background-color: #4e4e4e;
+}
+
+.SongList {
+flex: 1 0 auto;
+list-style-type: none;
+padding: 5px 10px 0px;
+}
+
+li {
+display: flex;
+padding: 0 20px;
+min-height: 50px;
+}
+
+li > p {
+flex: 0 0 33.3333333333333333%;/*每个p都占25%，总共四个p*/
+}
+
+.catty-cloud {
+border: 1px solid black;
+font-size: 0.6em;
+padding: 3px;
+}
+
+li:nth-child(2n) {
+background-color: #f2f2f2;
+}
+
+.albumInfo {
+flex: 1 0 auto;/*占满除了假图之外的所有宽度*/
+display: flex;
+flex-direction: column;
+font-weight: 300;
+color: #fff;
+padding-left: 50px;
+}
+
+.albumInfo > div:nth-child(1) {
+margin-bottom: auto;
+}
+
+.albumInfo > div:nth-child(2) {
+margin-top: 0;
+}
+
+.albumInfo > div:nth-child(2) > i.fa {
+font-size: 0.9em;
+padding: 0 0.7em;
+font-weight: 300;
+}
+
+.albumInfo > div:nth-child(1) > p:first-child {
+font-size: 1.8em;
+font-weight: bold;
+margin: 0 0 10px;/*注意顺序是上右下*/
+}
+
+.albumInfo > div:nth-child(1) > p:not(:first-child) {
+font-size: 0.9em;
+margin: 10px 0px;
+}
+.albumInfo > div:nth-child(1) > p:nth-child(2) > span:first-child {
+margin: 0px 10px 0px 0px;
+}
+.albumInfo > div:nth-child(1) > p:nth-child(2) > span:not(:first-child) {
+margin: 0px 10px;
+}
+
+.albumInfo > div:nth-child(1) > p:nth-child(3) {
+color: blanchedalmond;
+}
+
+footer {
+flex: 0 0 90px;
+padding: 10px;
+color: #fff;
+background-color: rgba(61, 100, 158, .9);
+display: flex;
+}
+
+.currentSong {
+display: flex;
+margin-right: auto;
+}
+
+.currentSong > img {
+padding-right: 10px;
+width: 100px;
+}
+
+.currentSongInfo {
+flex: 1 0 auto;
+display: flex;
+flex-direction: column;
+}
+
+.currentSongInfo > p:first-child {
+margin-bottom: auto;
+}
+
+.controlPanel {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 50%;
+}
+
+.controlPanel > i {
+flex: 1 0 auto;
+}
+</style>
+
+<script>
+window.console = window.console || function(t) {};
+</script>
+
+<script>
+if (document.location.search.match(/type=embed/gi)) {
+window.parent.postMessage("resize", "*");
+}
+</script>
+
+
+</head>
+
+<body translate="no" >
+    <sideBar>
+        <i class="fa fa-music">&nbsp;&nbsp;&nbsp;音乐馆</i>
+        <i class="fa fa-video-camera">&nbsp;&nbsp;&nbsp;视频</i>
+        <i class="fa fa-rss">&nbsp;&nbsp;&nbsp;电台</i>
+        <i class="fa fa-heart">&nbsp;&nbsp;&nbsp;我喜欢</i>
+        <i class="fa fa-tv">&nbsp;&nbsp;&nbsp;本地和下载</i>
+        <i class="fa fa-history">&nbsp;&nbsp;&nbsp;播放历史</i>
+        <i class="fa fa-bars">&nbsp;&nbsp;&nbsp;试听列表</i>
+        </sideBar>
+<main>
+
+<section class='ContentPane'>
+<div class='AlbumPane'>
+<img src="yanni.jfif">
+<section class='albumInfo'>
+<div>
+<p>Yanni</p>
+<p><span>中文名：雅尼·克里索马利斯</span><span>国籍：美国</span><span>职业：作曲家、键盘演奏家</span></p>
+<p>粉丝数：23.3万</p>
+</div>
+<div>
+<i class='fa fa-play'> &nbsp;Play all</i>
+<i class='fa fa-plus'> &nbsp;Add to</i>
+<i class='fa fa-ellipsis-h'> &nbsp;More</i>
+</div>
+</section>
+</div>
+<ul class='SongList'>
+    <li>
+        <p>歌曲</p>
+        <p>专辑</p>
+        <p>时长</p>
+        </li>
+<li>
+<p>With an orchid</p>
+<p>If I Could Tell You</p>
+<p>05:07</p>
+</li>
+<li>
+<p>夜莺</p>
+<p>背景音乐之旅：久仰之乐</p>
+<p>05:43</p>
+</li>
+
+<li>
+<p>One Man's Dream</p>
+<p>In My Time</p>
+<p>02:46</p>
+</li>
+</ul>
+</section>
+
+
+<footer>
+<div class='currentSong'>
+<img src="chill.jfif">
+<div class='currentSongInfo'>
+<p>What You Get - Yanni</p>
+<p>
+    <i class='fa fa-heart'>&nbsp;</i> 
+    <i class='fa fa-download'>&nbsp;</i> 
+    <i class='fa fa-ellipsis-h'>&nbsp;</i> 
+    
+</p>
+</div>
+</div>
+<div class='controlPanel'>
+<i class="fa fa-step-backward"></i>
+<i class="fa fa-pause"></i>
+<i class="fa fa-step-forward"></i>
+<i class="fa fa-repeat"></i>
+<i class="fa fa-random"></i>
+</div>
+</footer>
+</main>
+</body>
+
+</html>
