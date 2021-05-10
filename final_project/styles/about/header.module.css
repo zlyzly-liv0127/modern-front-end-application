@@ -1,0 +1,38 @@
+#header {
+    background-color: #222;
+    height: 32px;
+    line-height: 32px;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+#header div a {
+    color: #fff;
+    cursor: pointer;
+}
+
+#header::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#right_bar {
+    float: right;
+}
+
+#right_bar > div {
+    float: left;
+    padding: 0 10px;
+}
+
+#login {
+    background-color: red;
+    width: 65px;
+    text-align: center;
+} 
+
+#complaint {
+    border-right: 1px solid #3a3a3a;
+}
+

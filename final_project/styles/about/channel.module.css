@@ -1,0 +1,36 @@
+#channel {
+    background-color: white;
+    line-height: 20px;
+    color: black;
+    font-size: 15px;
+}
+
+#channel1{
+    display: flex;
+    justify-content:center;
+}
+
+#channel1 div{
+    padding: 16px 0;
+    margin: 0 15px;
+}
+
+#channel1 div a {
+    color: black;
+    cursor: pointer;
+}
+
+#channels {
+    border-bottom: red 2px solid;
+}
+
+#logo {
+    width: 100px;
+    height: 30px;
+}
+
+#logo img {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
