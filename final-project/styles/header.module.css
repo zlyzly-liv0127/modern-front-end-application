@@ -1,0 +1,68 @@
+#header {
+    background-color: #222;
+    height: 32px;
+    line-height: 32px;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+#header > div:not(:last-child){
+    float: left;
+}
+
+#header div a {
+    color: #fff;
+    cursor: pointer;
+}
+
+#header::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#left_bar {
+    float: left;
+}
+
+#left_bar > div {
+    float: left;
+}
+
+#left_bar::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#header_download {
+    padding: 0 8px;
+    border-right: 1px solid #3a3a3a;
+}
+
+#header_signup {
+    padding: 0 8px;
+}
+
+#header_weather {
+    padding-left: 7px;
+    cursor: pointer;
+}
+
+#header_weather span {
+    margin-right: 8px;
+    color: #fff;
+}
+
+#right_bar {
+    float: right;
+}
+
+#right_bar > div {
+    float: left;
+    padding: 0 10px;
+}
+
+#complaint {
+    border-right: 1px solid #3a3a3a;
+}
